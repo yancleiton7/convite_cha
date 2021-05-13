@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'pixel';
+    src: url('../fonts/upheavtt.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html,body { 
+    height: 100%;
+    background-color: black;
+    font-family: pixel;
+
+}
+
+
+.game {
+    display: inline-block;
+    height: 100%;
+    margin-top: 0;
+    width: 100%;
+    min-width: 200px;
+    background-image: url(../imagens/fotos/bg-menu.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.game .logo {
+    
+    display: flex;
+    height: 250px;
+    align-self: center;
+    margin: 25px auto;
+    background-image: url(../imagens/logo_jogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.start {
+    
+    display: flex;
+    height: 60px;
+    max-width: 60%;
+    margin: 50px auto 0px auto  ;
+    background-image: url(../imagens/butoes/start-azul.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.start:hover {
+    background-image: url(../imagens/butoes/start-vermelho1.png);
+}
+
+input{
+    appearance: none;
+}
+
+
+.formulario {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    min-width: 200px;
+    background-image: url(../imagens/fotos/bg1.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+.formulario .logo {
+    height: 10%;
+    max-height: 15%;
+    min-height: 150px;
+    background-image: url(../imagens/logo_jogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.formulario input{
+    font-family: pixel;
+    width: 98%;
+    padding: 5px 5px;
+    margin-top: 10px;
+    outline: none;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form {
+    margin: 20px;
+}
+
+.entrada {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px 20px;
+    width: 600px;
+    max-width: 95%;
+    border: 5px solid steelblue;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+    max-height: 80%;
+    
+}
+.form p{
+    display: block;
+    color: yellow;
+    font-size: 40px;
+    margin: 10px 0;
+    
+}
+
+.form .genero {
+    display: inline-block;
+    margin-top: 2px;
+    height: 60px;
+    width: 200px;
+    max-width: 85%;
+    border: 3px solid rgba(255, 255, 255, 0 );
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.form #masculino {
+    background-image: url(../imagens/butoes/masculino.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.form #feminino {
+    background-image: url(../imagens/butoes/feminino.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.form .genero:hover, .feminino:hover {
+    border-color: white;
+    transition: 0.5s;
+    transition-timing-function: linear;
+}
+
+.abertura {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    min-width: 200px;
+    background-image: url(../imagens/fotos/bg_mario.gif);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 40px;
+    
+    
+    
+}
+
+.abertura .box {
+    
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0;
+    width: 94%;
+    max-height: 95%;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow:  10px 10px 5px rgb(11, 25, 72);
+    padding: 10px 10px;
+    
+}
+
+.box .icons {
+    width: 35%;
+    min-width: 150px;
+    max-width: 200px ;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.intro > p {
+    color: rgb(238, 247, 248);
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+.botoes > .carta {  
+    width: 100px;
+    height: auto;
+    margin: 5px 5px;
+    border: 5px solid rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    cursor: pointer;
+    
+
+}
+
+.botoes > .carta:hover {
+    border-color: white;
+    transition: 0.5s;
+    transition-timing-function: linear;
+}
+
+
+.convite {
+    height: 100%;
+    width: 100%;
+    min-width: 200px;
+    background-image: url(../imagens/fotos/maos_dadas.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+    
+}
+
+.convite .box {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 20px;
+    width: 600px;
+    max-width: 95%;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow:  10px 10px 5px grey;
+    
+    
+}
+
+.box .life {
+    width: 30%;
+    height: auto;
+
+}
+
+.pergunta > p {
+    color: rgb(68, 68, 68);
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+.box:last-child {
+    font-size: 15px;
+    color: rgb(119, 118, 118);
+    margin-top: 15px;
+}
+
+.botoes{
+    padding: 5px 10px;
+}
+
+.botoes > .btn {
+    width: 20%;
+    height: auto;
+    min-width: 100px;
+    margin: 5px 5px;
+    border: 5px solid rgba(255, 255, 255, 0 );
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+.botoes > .btn:hover {
+    border-color: rgb(70, 70, 70);
+    transition: 0.5s;
+    transition-timing-function: linear;
+}
+
+
+
+
+.final {
+    height: 100%;
+    width: 100%;
+    min-width: 200px;
+    background-image: url(../imagens/fotos/casal.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+    
+}
+
+.final .box {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 20px;
+    width: 600px;
+    max-width: 95%;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow:  0px 10px 5px grey;
+}
+
+
+.agradecimento > p {
+    color: rgb(68, 68, 68);
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.final .seguir {
+    font-size: 30px;
+    color: rgb(42, 42, 150);
+    border: 5px solid rgb(42, 42, 150);
+    border-radius: 15px;
+    margin: 15px auto;
+    cursor: pointer;
+}
+
+.final .seguir:hover {
+    background-color: rgba(106, 156, 248, 0.542);
+    transition: 0.5s;
+    transition-timing-function: linear;
+}
+
+
+
+
+
+.detalhes {
+    height: 100%;
+    width: 100%;
+    min-width: 200px;
+    background-image: url(../imagens/fotos/casal.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+    
+}
+
+.detalhes .box {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 20px;
+    width: 600px;
+    max-width: 95%;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow:  0px 10px 5px grey;
+}
+
+
+.spoilers > p {
+    color: rgb(68, 68, 68);
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.spoilers .lista{
+    font-size: 30px;
+    color: rgb(42, 42, 150);
+    border: 5px solid rgb(42, 42, 150);
+    border-radius: 15px;
+    margin: 20px auto;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 2px 4px;
+}
+
+.spoilers .data {
+    color: red;
+}
+.spoilers .lista:hover {
+    background-color: rgba(106, 156, 248, 0.542);
+    transition: 0.5s;
+    transition-timing-function: linear;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .game {
+        background-image: url(../imagens/fotos/bg-menup.gif);
+    }
+    .form p{
+        font-size: 30px;
+        
+    }
+    .pergunta p, .intro p , .agradecimento p , .spoilers p{
+        font-size: 25px;
+        
+    }
+    .botoes > .carta {
+        width: 70px;
+    }
+
+    .formulario input{
+        font-size: 20px;
+    }
+ 
+    .convite > .box {
+        margin: 25% 0;
+    }
+    
+    .convite {
+        padding: 10% 0;
+    }
+}

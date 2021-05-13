@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <meta property="og:title" content="Temos uma pergunta a te fazer" />
+    <meta property="og:description" content="Venha! Entre, dê uma olhada e se divirta" />
+    <meta property="og:image" content="imagens/tela.png" />  
+    <link rel="icon" href="imagens/favicon.png" />
+    <script src="js/index.js"></script>
+    <title>Casamento Yan e Iasmin</title>
+</head>
+<body>
+
+    <audio id="musica" autoplay loop >
+        <source src="audio/sefoc.ogg" type="audio/ogg">
+        <source src="audio/se_for_cvc.mp3" type="audio/mpeg">
+        <source src="audio/seforcvc.wav" type="audio/wav">
+      </audio>
+
+      
+
+    <section class="game" id="main">
+            <div class="logo"></div>
+            <div class="start" onclick="muda_pagina('main', 'formulario') ; play_audio()"></div>
+    </section>
+
+    <section id="formulario" class="formulario" style="display: none;">
+            
+            <form action="">
+            <div class="form">
+                <div class="logo"></div>
+                <div class="entrada">
+                    <p>Nome ou apelido: </p>
+                    <input type="text" id="nome" required placeholder="nome">
+                    <p>Selecione o Gênero:</p>
+                    
+                    <div>
+                        <div class="genero" id="feminino" onclick="capturar('nome', 'nome_madrinha', 'nome_madrinha1', 'formulario', 'intro_madrinha')"></div>
+                        <div class="genero" id="masculino" onclick="capturar('nome', 'nome_padrinho', 'nome_padrinho1', 'formulario', 'intro_padrinho') "></div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+        
+    </section>
+
+    <section id="intro_padrinho" class="abertura" style="display: none;">
+        <div class="box">
+            <img src="imagens/fotos/mario_icons1.png" class="icons" alt="">
+            <div class="intro">
+                <p>E aí, <span id="nome_padrinho"></span>!</p>
+                <p>tudo bem com você? você foi premiado com um convite muito especial!</p>
+                <p>Clique na cartinha aqui embaixo para abrí-la</p>
+            </div>
+            <div class="botoes">
+                <img src="imagens/fotos/envelope_fechado.png" alt="" class="carta" onclick="muda_pagina('intro_padrinho', 'padrinho')">
+            </div>
+        </div>
+    </section>
+
+    <section id="intro_madrinha" class="abertura" style="display: none;">
+        <div class="box">
+            <img src="imagens/fotos/mario_icons1.png" class="icons" alt="">
+            <div class="intro">
+                <p>olá, <span id="nome_madrinha"></span>!</p>
+                <p>tudo bem com você? você foi premiada com um convite muito especial!</p>
+                <p>Clique na cartinha aqui embaixo para abrí-la</p>
+            </div>
+            <div class="botoes">
+                <img src="imagens/fotos/envelope_fechado.png" alt="" class="carta" onclick="muda_pagina('intro_madrinha', 'madrinha')">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="padrinho" class="convite" style="display: none;">
+                        
+        <div class="box">
+            <img src="imagens/fotos/life.png" class="life" alt="">
+            <div class="pergunta">
+                <p>Querido, <span id="nome_padrinho1"></span>,</p>
+                <p>você aceita ser nosso padrinho de casamento? </p>
+            </div>
+            <div class="botoes">
+                <img src="imagens/butoes/sim.png" alt="" class="btn" onclick="muda_pagina('padrinho', 'final')" >
+                <img src="imagens/butoes/nao.png" alt="" class="btn">
+            </div>
+            <span id="assinatura">Com muuita gratidão, <br> iasmin e yan</span>
+        </div>
+                
+    </section>
+    <section id="madrinha" class="convite" style="display: none;">
+                        
+        <div class="box">
+            <img src="imagens/fotos/life.png" class="life" alt="">
+            <div class="pergunta">
+                <p>Querida, <span id="nome_madrinha1"></span>,</p>
+                <p>você aceita ser nossa madrinha de casamento? </p>
+            </div>
+            <div class="botoes">
+                <img src="imagens/butoes/sim.png" alt="" class="btn" onclick="muda_pagina('madrinha', 'final')" >
+                <img src="imagens/butoes/nao.png" alt="" class="btn" onclick="nao_aceitou()">
+            </div>
+            <span id="assinatura">Com muuita gratidão, <br> iasmin e yan</span>
+        </div>
+                
+    </section>
+
+
+    <section id="final" class="final" style="display: none;">
+                        
+        <div class="box">
+            <img src="imagens/fotos/life.png" class="life" alt="">
+            <div class="agradecimento">
+                <p>que bom que você aceitouuu!!!</p>
+                <p>estamos muito felizes com isso :D</p>
+                <p>Agora que você está com a gente nessa, fica atento porque em breve vamos dar notícias e instruções sobre o casamento para você.</p>
+                <p>Mas podemos dar alguns spoilers, Que tal?</p>
+                
+                <div  onclick="muda_pagina('final', 'detalhes')"><p class="seguir">ver spoilers</p></div>
+            </div>
+        </div>
+                
+    </section>
+
+
+    <section id="detalhes" class="detalhes" style="display: none;">
+                        
+        <div class="box">
+            <img src="imagens/fotos/life.png" class="life" alt="">
+            <div class="spoilers">
+                <p>O casamento será realizado no dia</p><p class="data">19.09.2021</p>
+                <p>E já temos listinha de Presentes!!</p>
+                <p>clica no link aqui em baixo e você vai ser redirecionado para escolher o que quer presentear.</p>
+                <p>Tamo juntooos!!!</p>
+
+                <div class="lista" onclick="redirect()"><p >Lista de presentes</p></div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
