@@ -159,6 +159,34 @@ input{
     transition-timing-function: linear;
 }
 
+.historia {
+    height: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: yellow;
+    font-size: 30px;
+}
+
+.historia p::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+
 .abertura {
     display: flex;
     height: 100%;

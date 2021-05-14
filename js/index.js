@@ -52,3 +52,14 @@ function redirect (){
 
 
 
+
+function typeWriter(elemento) {
+    const texto = document.getElementById(elemento)
+    const textoArray = texto.innerHTML.split('');
+    texto.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+      setTimeout(() => texto.innerHTML += letra, 75 * i);
+    });
+
+}
+
