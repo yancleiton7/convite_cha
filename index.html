@@ -19,10 +19,15 @@
         <source src="audio/se_for_cvc.mp3" type="audio/mpeg">
         <source src="audio/seforcvc.wav" type="audio/wav">
       </audio>
-
+    
+    <audio id="star_wars" autoplay loop >
+        
+        <source src="audio/star_wars.mp3" type="audio/mpeg">
+        
+      </audio>
     
     
-    <section class="game" id="main" style="display: none">
+    <section class="game" id="main" onload="play_audio('star_wars')"> 
             <div class="logo"></div>
             <div class="start" onclick="muda_pagina('main', 'formulario') ; play_audio()"></div>
     </section>
@@ -38,8 +43,8 @@
                     <p>Selecione o Gênero:</p>
                     
                     <div>
-                        <div class="genero" id="feminino" onclick="capturar('nome', 'nome_madrinha', 'nome_madrinha1', 'formulario', 'intro_madrinha')"></div>
-                        <div class="genero" id="masculino" onclick="capturar('nome', 'nome_padrinho', 'nome_padrinho1', 'formulario', 'intro_padrinho') "></div>
+                        <div class="genero" id="feminino" onclick="capturar('nome', 'nome_madrinha', 'nome_madrinha1', 'formulario', 'historia'); muda_texto()"></div>
+                        <div class="genero" id="masculino" onclick="capturar('nome', 'nome_padrinho', 'nome_padrinho1', 'formulario', 'historia'); muda_texto() "></div>
                     </div>
 
                 </div>
@@ -48,28 +53,26 @@
         
     </section>
 
-    <section class="historia">
-        <section >
-
-          
-             <p id="p1" onclick="muda_pagina('p1', 'p2') ; typeWriter('p2')">O ano era 2019, um casal de jovens despretenciosos começam a conversar e daí construiram uma amizade divertida e bem saudável... </p> 
-
-            <p id="p2" style="display: none;">Ela o olha e acha estranho o que sente quando ver ele sorrir e gargalhar, ela não sabe o que é que sente, mas sabe que é bom.</p>
-
-            <p id="p3" style="display: none;">Ele tem dificultades de concentrar em outra coisa senão em ouvir a voz dela quando fala de Deus, musica, física, astronomia... Ele literalmente voa para o espaço quando ver os seus dentes.</p> 
-            <p id="p4" style="display: none;">Ele suspira: "Nossa, quanta beleza! Porque meu coração ta batendo tão forte? Será que estou de novo com aquela doença?"</p>
-
-            <p id="p5" style="display: none;">Não demorou muito mas eles descobriram que sentiam tudo aquilo pq estavam apaixonados. Então, decidiram fazer algo com aquilo: Eles se uniram e agora vão mais a diante...</p>
-
-            <p id="p6" style="display: none;">IASMIN E YAN VÃO SE CASAR</p>
-
-        </section>
-        <section class="p2">
-
-        </section>
-        <section class="p3">
+    <section class="historia"  id="historia" style="display: none;">
+        
+        <div class="person">
+            <div class="iasmin" id="iasmin"></div>
+            <div class="yan" id="yan" style="display: none;"></div>
+        </div>
+        <div class="box-historia">
+                <p id="vazio"></p>
+                <p id="prologo">olá, tudo bem? Eu sou Iasmin e hoje vou te contar uma historia...</p>
+                <p id="p1" style="display: none;" >O ano era 2019, um casal de jovens despretenciosos começam a conversar e daí construiram uma amizade divertida e bem saudável... </p>
+                <p id="p2" style="display: none;">Ela o olha e acha estranho o que sente quando ver ele sorrir e gargalhar, ela não sabe o que é que sente, mas sabe que é bom. </p>
+                <p id="p3" style="display: none;">Ele tem dificultades de concentrar em outra coisa senão em ouvir a voz dela quando fala de Deus, musica, física, astronomia... Ele literalmente voa para o espaço quando ver os seus dentes...</p>
+                <p id="p4" style="display: none;">Ele suspira: "Nossa, quanta beleza! Porque meu coração ta batendo tão forte? Será que estou de novo com aquela doença?"</p>
+                <p id="p5" style="display: none;">Não demorou muito mas eles descobriram que sentiam tudo aquilo pq estavam apaixonados. Então, decidiram fazer algo com aquilo: Eles se uniram e agora vão mais a diante...</p>
+                <p id="p6" style="display: none;">IASMIN E YAN VÃO SE CASAR!!</p>
             
-        </section>
+        </div>
+        
+        <div class="pular" id="btn_pular" onclick="muda_texto()" >Pular</div>
+
 
     </section>
 
