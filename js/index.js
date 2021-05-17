@@ -67,12 +67,12 @@ function muda_pagina_flex(some, aparece){
 
 function play_audio(song) {
     musica = document.getElementById(song);
-    musica.pause();
+    musica.play();
 }
 
 function pause_audio(song) {
     musica = document.getElementById(song);
-    musica.play();
+    musica.pause();
 
 }
 
@@ -81,7 +81,6 @@ function pause_audio(song) {
 function redirect (){
     window.location.href = "http://www.encurtador.com.br/gxEQ6";
 }
-
 
 
 
@@ -159,5 +158,7 @@ function muda_texto() {
     }
     else if (atual === "p6") {
         muda_pagina("historia", "intro_padrinho")
+        pause_audio("star_wars");
+        play_audio("musica");
     }
 }

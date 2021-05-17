@@ -14,29 +14,30 @@
 </head>
 <body>
 
-    <audio id="musica" autoplay loop >
+    <audio id="musica" loop >
         <source src="audio/sefoc.ogg" type="audio/ogg">
         <source src="audio/se_for_cvc.mp3" type="audio/mpeg">
         <source src="audio/seforcvc.wav" type="audio/wav">
       </audio>
     
-    <audio id="star_wars" autoplay loop >
-        
+    <audio id="star_wars" autoplay>
+        <source src="audio/star_wars.ogg" type="audio/ogg">
         <source src="audio/star_wars.mp3" type="audio/mpeg">
+        <source src="audio/star_wars.wav" type="audio/wav">
         
       </audio>
     
     
-    <section class="game" id="main" onload="play_audio('star_wars')"> 
+    <section class="game" id="main" > 
             <div class="logo"></div>
-            <div class="start" onclick="muda_pagina('main', 'formulario') ; play_audio()"></div>
+            <div class="start" onclick="muda_pagina('main', 'formulario'); play_audio('star_wars')" ></div>
     </section>
 
     <section id="formulario" class="formulario" style="display: none;">
             
             <form action="">
             <div class="form">
-                <div class="logo"></div>
+                <div class="logo"></div>    
                 <div class="entrada">
                     <p>Nome ou apelido: </p>
                     <input type="text" id="nome" required placeholder="nome">
