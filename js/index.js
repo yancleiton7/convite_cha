@@ -12,8 +12,11 @@ function capturar(nome, intro, convite,  some, aparece){
     muda_pagina_flex(some, aparece);
     document.getElementById(intro).innerHTML = capturando;
     document.getElementById(convite).innerHTML = capturando;
+    muda_texto();
     }
 
+    
+    
 }
 
 function nao_aceitou(){
@@ -100,13 +103,14 @@ function typeWriter(elemento) {
     var prox = "prologo";
 
 function muda_texto() {
+    
 
     
     if (atual === "vazio") {
         document.getElementById(atual).style.display = "none";
         document.getElementById(prox).style.display = "flex";
         typeWriter(prox);
-        atual = "prologo";
+        atual = "prologo" 
         prox = "p1";
     }
     
@@ -157,7 +161,7 @@ function muda_texto() {
         atual = "p6";
     }
     else if (atual === "p6") {
-        muda_pagina("historia", "intro_padrinho")
+        muda_pagina("historia", "intro")
         pause_audio("star_wars");
         play_audio("musica");
     }

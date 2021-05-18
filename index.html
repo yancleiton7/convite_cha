@@ -44,8 +44,8 @@
                     <p>Selecione o Gênero:</p>
                     
                     <div>
-                        <div class="genero" id="feminino" onclick="capturar('nome', 'nome_madrinha', 'nome_madrinha1', 'formulario', 'historia'); muda_texto()"></div>
-                        <div class="genero" id="masculino" onclick="capturar('nome', 'nome_padrinho', 'nome_padrinho1', 'formulario', 'historia'); muda_texto() "></div>
+                        <div class="genero" id="feminino" onclick="capturar('nome', 'nome_convidado', 'nome_madrinha1', 'formulario', 'historia'); muda_texto()"></div>
+                        <div class="genero" id="masculino" onclick="capturar('nome', 'nome_convidado', 'nome_padrinho1', 'formulario', 'historia'); muda_texto() "></div>
                     </div>
 
                 </div>
@@ -62,7 +62,7 @@
         </div>
         <div class="box-historia">
                 <p id="vazio"></p>
-                <p id="prologo">olá, tudo bem? Eu sou Iasmin e hoje vou te contar uma historia...</p>
+                <p id="prologo" style="display: none;">olá, tudo bem? Eu sou Iasmin e hoje vou te contar uma historia...</p>
                 <p id="p1" style="display: none;" >O ano era 2019, um casal de jovens despretenciosos começam a conversar e daí construiram uma amizade divertida e bem saudável... </p>
                 <p id="p2" style="display: none;">Ela o olha e acha estranho o que sente quando ver ele sorrir e gargalhar, ela não sabe o que é que sente, mas sabe que é bom. </p>
                 <p id="p3" style="display: none;">Ele tem dificultades de concentrar em outra coisa senão em ouvir a voz dela quando fala de Deus, musica, física, astronomia... Ele literalmente voa para o espaço quando ver os seus dentes...</p>
@@ -81,20 +81,22 @@
 
 
 
-    <section id="intro_padrinho" class="abertura" style="display: none;">
+    <section id="intro" class="abertura" style="display: none;">
         <div class="box">
             <img src="imagens/fotos/mario_icons1.png" class="icons" alt="">
             <div class="intro">
-                <p>E aí, <span id="nome_padrinho"></span>!</p>
-                <p>tudo bem com você? você foi premiado com um convite muito especial!</p>
-                <p>Clique na cartinha aqui embaixo para abrí-la</p>
+                <p>E aí, <span id="nome"></span>! Tudo bem?</p>
+                <p>Que bom ter você aqui com a gente.</p>
+                <p>E hoje queremos te fazer um convite especial. Que está na cartinha aqui em baixo.</p>
+                <p>Clique nela para abrí-la</p>
             </div>
             <div class="botoes">
-                <img src="imagens/fotos/envelope_fechado.png" alt="" class="carta" onclick="muda_pagina('intro_padrinho', 'padrinho')">
+                <img src="imagens/fotos/envelope_fechado.png" alt="" class="carta" onclick="muda_pagina('intro', 'convite')">
             </div>
         </div>
     </section>
 
+ <!-- 
     <section id="intro_madrinha" class="abertura" style="display: none;">
         <div class="box">
             <img src="imagens/fotos/mario_icons1.png" class="icons" alt="">
@@ -108,31 +110,35 @@
             </div>
         </div>
     </section>
+-->
 
-
-    <section id="padrinho" class="convite" style="display: none;">
+    <section id="convite" class="convite" style="display: none;">
                         
         <div class="box">
             <img src="imagens/fotos/life.png" class="life" alt="">
             <div class="pergunta">
-                <p>Querido, <span id="nome_padrinho1"></span>,</p>
-                <p>você aceita ser nosso padrinho de casamento? </p>
+                <p>Querida, <span id="nome_madrinha1"></span>,</p>
+                <p>Queremos te convidar para o nosso chá de casamento </p>
+                <p>Você quer participar?</p>
             </div>
             <div class="botoes">
-                <img src="imagens/butoes/sim.png" alt="" class="btn" onclick="muda_pagina('padrinho', 'final')" >
-                <img src="imagens/butoes/nao.png" alt="" class="btn">
+                <img src="imagens/butoes/sim.png" alt="" class="btn" onclick="muda_pagina('convite', 'final')" >
+                <img src="imagens/butoes/nao.png" alt="" class="btn" onclick="nao_aceitou()">
             </div>
             <span id="assinatura">Com muuita gratidão, <br> iasmin e yan</span>
         </div>
                 
     </section>
+
+    <!--
     <section id="madrinha" class="convite" style="display: none;">
                         
         <div class="box">
             <img src="imagens/fotos/life.png" class="life" alt="">
             <div class="pergunta">
                 <p>Querida, <span id="nome_madrinha1"></span>,</p>
-                <p>você aceita ser nossa madrinha de casamento? </p>
+                <p>Queremos te convidar para o nosso chá de casamento </p>
+                <p>Você quer participar?</p>
             </div>
             <div class="botoes">
                 <img src="imagens/butoes/sim.png" alt="" class="btn" onclick="muda_pagina('madrinha', 'final')" >
@@ -142,6 +148,7 @@
         </div>
                 
     </section>
+    -->
 
 
     <section id="final" class="final" style="display: none;">

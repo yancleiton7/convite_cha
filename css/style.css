@@ -16,6 +16,7 @@ html,body {
     height: 100%;
     background-color: black;
     font-family: pixel;
+    letter-spacing: 2px;
 
 }
 
@@ -28,7 +29,6 @@ html,body {
     background-image: url(../imagens/fotos/bg-menu.gif);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 
@@ -160,6 +160,9 @@ input{
 }
 
 .historia {
+    background-image: url(../imagens/fotos/bg-menu.gif);
+    background-size: contain;
+    background-position: center;
     height: 100%;   
     display: flex;
     align-items: center;
@@ -469,9 +472,7 @@ input{
 
 
 @media screen and (max-width: 480px) {
-    .game {
-        background-image: url(../imagens/fotos/bg-menup.gif);
-    }
+   
     .form p{
         font-size: 30px;
         
