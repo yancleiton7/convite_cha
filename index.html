@@ -28,7 +28,7 @@
       </audio>
     
     
-    <section class="game" id="main" > 
+    <section class="game" id="main" >
             <div class="logo"></div>
             <div class="start" onclick="muda_pagina('main', 'formulario'); play_audio('star_wars')" ></div>
     </section>
@@ -41,11 +41,11 @@
                 <div class="entrada">
                     <p>Nome ou apelido: </p>
                     <input type="text" id="nome" required placeholder="nome">
-                    <p>Selecione o Gênero:</p>
+                    <p>escolha o seu caminho da força:</p>
                     
                     <div>
-                        <div class="genero" id="feminino" onclick="capturar('nome', 'nome_convidado', 'nome_madrinha1', 'formulario', 'historia'); muda_texto()"></div>
-                        <div class="genero" id="masculino" onclick="capturar('nome', 'nome_convidado', 'nome_padrinho1', 'formulario', 'historia'); muda_texto() "></div>
+                        <div class="genero" id="feminino" onclick="capturar('nome', 'nome_convidado', 'nome_convidado1', 'formulario', 'historia'); muda_texto()"></div>
+                        <div class="genero" id="masculino" onclick="capturar('nome', 'nome_convidado', 'nome_convidado1', 'formulario', 'historia'); muda_texto() "></div>
                     </div>
 
                 </div>
@@ -62,17 +62,17 @@
         </div>
         <div class="box-historia">
                 <p id="vazio"></p>
-                <p id="prologo" style="display: none;">olá, tudo bem? Eu sou Iasmin e hoje vou te contar uma historia...</p>
-                <p id="p1" style="display: none;" >O ano era 2019, um casal de jovens despretenciosos começam a conversar e daí construiram uma amizade divertida e bem saudável... </p>
-                <p id="p2" style="display: none;">Ela o olha e acha estranho o que sente quando ver ele sorrir e gargalhar, ela não sabe o que é que sente, mas sabe que é bom. </p>
-                <p id="p3" style="display: none;">Ele tem dificultades de concentrar em outra coisa senão em ouvir a voz dela quando fala de Deus, musica, física, astronomia... Ele literalmente voa para o espaço quando ver os seus dentes...</p>
-                <p id="p4" style="display: none;">Ele suspira: "Nossa, quanta beleza! Porque meu coração ta batendo tão forte? Será que estou de novo com aquela doença?"</p>
-                <p id="p5" style="display: none;">Não demorou muito mas eles descobriram que sentiam tudo aquilo pq estavam apaixonados. Então, decidiram fazer algo com aquilo: Eles se uniram e agora vão mais a diante...</p>
+                <p id="prologo" style="display: none;">olá, tudo bem? Eu sou Iasmin e hoje vou te contar uma história...</p>
+                <p id="p1" style="display: none;" >O ano era 2019, um casal de jovens despretenciosos começam a conversar e daí construiram uma amizade divertida e muito boa... </p>
+                <p id="p2" style="display: none;">Um dia ela o olha e acha estranho o que sente quando ver ele sorrir e gargalhar. ela não sabe o que é que sente, mas sabe que é bom. </p>
+                <p id="p3" style="display: none;">Ele tem dificutades de concentrar em outra coisa senão na voz dela quando canta, fala sobre Deus, musica, física, astronomia... Ele literalmente viaja para o espaço quando ver ela rir de suas piadinhas...</p>
+                <p id="p4" style="display: none;">Um dia ele suspira: "Nossa, quanta beleza! Por que meu coração ta batendo tão forte? Será que estou de novo com aquela doença? oh não! Oh não! oh não não não não não!"</p>
+                <p id="p5" style="display: none;">Não demorou muito mas eles descobriram que sentiam tudo isso porque, sim, estavam apaixonados. Então, decidiram fazer algo com aquilo: Eles se uniram e agora vão mais a diante...</p>
                 <p id="p6" style="display: none;">IASMIN E YAN VÃO SE CASAR!!</p>
             
         </div>
         
-        <div class="pular" id="btn_pular" onclick="muda_texto()" >Pular</div>
+        <div class="pular" id="btn_pular" onclick="muda_texto()" >Continuar</div>
 
 
     </section>
@@ -83,9 +83,9 @@
 
     <section id="intro" class="abertura" style="display: none;">
         <div class="box">
-            <img src="imagens/fotos/mario_icons1.png" class="icons" alt="">
+            <img src="imagens/fotos/droids.png" class="icons" alt="">
             <div class="intro">
-                <p>E aí, <span id="nome"></span>! Tudo bem?</p>
+                <p>E aí, <span id="nome_convidado"></span>! Tudo bem?</p>
                 <p>Que bom ter você aqui com a gente.</p>
                 <p>E hoje queremos te fazer um convite especial. Que está na cartinha aqui em baixo.</p>
                 <p>Clique nela para abrí-la</p>
@@ -115,9 +115,9 @@
     <section id="convite" class="convite" style="display: none;">
                         
         <div class="box">
-            <img src="imagens/fotos/life.png" class="life" alt="">
+            <img src="imagens/fotos/fight.gif" class="life" alt="">
             <div class="pergunta">
-                <p>Querida, <span id="nome_madrinha1"></span>,</p>
+                <p><span id="nome_convidado1"></span>,</p>
                 <p>Queremos te convidar para o nosso chá de casamento </p>
                 <p>Você quer participar?</p>
             </div>
@@ -154,14 +154,14 @@
     <section id="final" class="final" style="display: none;">
                         
         <div class="box">
-            <img src="imagens/fotos/life.png" class="life" alt="">
+            <img src="imagens/fotos/mando.gif" class="life" alt="">
             <div class="agradecimento">
                 <p>que bom que você aceitouuu!!!</p>
                 <p>estamos muito felizes com isso :D</p>
-                <p>Agora que você está com a gente nessa, fica atento porque em breve vamos dar notícias e instruções sobre o casamento para você.</p>
-                <p>Mas podemos dar alguns spoilers, Que tal?</p>
+                <p>O nosso chá será realizado no dia <p class="data">10.07.2021</p> às 19h</p>
                 
-                <div  onclick="muda_pagina('final', 'detalhes')"><p class="seguir">ver spoilers</p></div>
+                
+                <div  onclick="muda_pagina('final', 'detalhes')"><p class="seguir">saber mais</p></div>
             </div>
         </div>
                 
@@ -171,14 +171,39 @@
     <section id="detalhes" class="detalhes" style="display: none;">
                         
         <div class="box">
-            <img src="imagens/fotos/life.png" class="life" alt="">
+            
             <div class="spoilers">
-                <p>O casamento será realizado no dia</p><p class="data">19.09.2021</p>
-                <p>E já temos listinha de Presentes!!</p>
-                <p>clica no link aqui em baixo e você vai ser redirecionado para escolher o que quer presentear.</p>
-                <p>Tamo juntooos!!!</p>
+                <div id="part1">
+                    <img src="imagens/fotos/droids.png" class="life" alt="">
+                    <p>Por conta da pandemia do coronavírus não poderemos fazer uma  comemoração como a gente gostaria e, por isso, o nosso chá será online.</p>
+                    <p> </p>
+                    <p>Mas não se preocupe!</p>
+                    <div class="lista" onclick="muda_texto1()"><p>Continuar</p></div>
+                </div>
+                <div id="part2" style="display: none;">
+                    <img src="imagens/fotos/sw.png" class="life" alt="">
+                    <p>Teremos uma programação bem divertida pra vc desfrutar de um tempo bem legal com a gente:</p>
+                    <p></p>
+                    <p>Vão ter sorteios de premios, jogos, brincadeiras, musicas e muito mais.</p>
+                    <div class="lista" onclick="muda_texto1()"><p>Continuar</p></div>
+                </div>
+                <div id="part3" style="display: none;">
+                    <img src="imagens/fotos/rr2.gif" class="life" alt="">
+                    <p>Como a gente já gosta de um carinho um pouco mais próximo, também vamos fazer um drive thru onde você poderá levar seu presente e tirar uma foto com a gente e levar uma lembrancinha do nosso chá.</p>
 
-                <div class="lista" onclick="redirect()"><p >Lista de presentes</p></div>
+                    <div class="carro"></div>
+
+                    <div class="lista" onclick="muda_texto1()"><p>Continuar</p></div>
+                </div>
+                <div id="part4" style="display: none;">
+                    <img src="imagens/fotos/rr2.gif" class="life" alt="">
+                    <p>Aqui em baixo deixamos o link de nossa lista de casamento para você explorar e, se puder, fazer parte da montagem da nossa casa. </p> 
+                    <p>Sinta-se a vontade!</p>
+                    <p>E em caso de duvidas é só falar com a gente!</p>
+                    <p>manda uma mensagem para a gente para confirmar sua partcipação</p>
+                    
+                    <div class="lista" onclick="redirect()"><p >Lista de presentes</p></div>
+                </div>
                 
             </div>
         </div>

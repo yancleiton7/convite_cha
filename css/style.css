@@ -20,6 +20,7 @@ html,body {
 
 }
 
+
 .game {
     display: inline-block;
     height: 100%;
@@ -27,7 +28,7 @@ html,body {
     width: 100%;
     min-width: 200px;
     background-image: url(../imagens/fotos/bg-menu.gif);
-    background-size: cover;
+    background-size: 50% 50%;
     background-position: center;
 }
 
@@ -73,9 +74,9 @@ input{
     height: 100%;
     width: 100%;
     min-width: 200px;
-    background-image: url(../imagens/fotos/bg1.gif);
+    background-image: url(../imagens/fotos/bgsw.gif);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     
 }
@@ -140,14 +141,14 @@ input{
 
 
 .form #masculino {
-    background-image: url(../imagens/butoes/masculino.png);
+    background-image: url(../imagens/butoes/sith.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
 .form #feminino {
-    background-image: url(../imagens/butoes/feminino.png);
+    background-image: url(../imagens/butoes/jedi.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -243,10 +244,10 @@ input{
     height: 100%;
     width: 100%;
     min-width: 200px;
-    background-image: url(../imagens/fotos/bg_mario.gif);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background-image: url(../imagens/fotos/bg-menu.gif);
+    background-size: 50% 50%;
+    background-position: center;
+    background-repeat: repeat;
     text-align: center;
     padding: 40px;
     
@@ -316,7 +317,10 @@ input{
 .convite .box {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px 20px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
     width: 600px;
     max-width: 95%;
     margin: 20px auto;
@@ -443,13 +447,28 @@ input{
 }
 
 
-.spoilers > p {
+.spoilers p {
     color: rgb(68, 68, 68);
     font-size: 30px;
     margin-top: 20px;
 }
 
-.spoilers .lista{
+.agradecimento .data {
+    color: red;
+}
+
+.carro {
+    width: 80px;
+    height: 80px;
+    background-image: url(../imagens/fotos/luke.gif);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px auto;
+}
+
+
+.lista p {
     font-size: 30px;
     color: rgb(42, 42, 150);
     border: 5px solid rgb(42, 42, 150);
@@ -460,10 +479,7 @@ input{
     padding: 2px 4px;
 }
 
-.spoilers .data {
-    color: red;
-}
-.spoilers .lista:hover {
+.lista:hover {
     background-color: rgba(106, 156, 248, 0.542);
     transition: 0.5s;
     transition-timing-function: linear;

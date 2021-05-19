@@ -10,9 +10,11 @@ function capturar(nome, intro, convite,  some, aparece){
     else{
     
     muda_pagina_flex(some, aparece);
+    muda_texto();
     document.getElementById(intro).innerHTML = capturando;
     document.getElementById(convite).innerHTML = capturando;
-    muda_texto();
+    
+    
     }
 
     
@@ -166,3 +168,33 @@ function muda_texto() {
         play_audio("musica");
     }
 }
+
+var temp = "part1"
+var seg = "part2" 
+
+function muda_texto1() {
+    
+    
+    
+        
+    if (temp === "part1") {
+        document.getElementById(temp).style.display = "none";
+        document.getElementById(seg).style.display = "inline-block";
+        temp = "part2" 
+        seg = "part3";
+    }
+    
+    else if (temp === "part2") {
+        document.getElementById(temp).style.display = "none";
+        document.getElementById(seg).style.display = "inline-block";
+        temp = "part3" 
+        seg = "part4";
+    }
+    else if (temp === "part3") {
+        document.getElementById(temp).style.display = "none";
+        document.getElementById(seg).style.display = "inline-block";
+        temp = "part4" 
+    }
+
+    
+    }
